@@ -1229,7 +1229,9 @@ class XTile:
         if not custom_geoms_str:
             support.dialog_info(_("The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 Set'"), self.glade.window)
             return
-        self.gconf_client.set_string(cons.GCONF_LATEST_TILING % glob.screen_index, "1")
+        self.white_list_exist_or_create()
+        self.white_list_update()
+        self.reload_windows_list()
         custom_geoms_vec = custom_geoms_str.split(" ")
         windows_list = self.store.get_checked_windows_list(True)
         windows_list = windows_list[0] + windows_list[1]
@@ -1247,7 +1249,9 @@ class XTile:
         if not custom_geoms_str:
             support.dialog_info(_("The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 Set'"), self.glade.window)
             return
-        self.gconf_client.set_string(cons.GCONF_LATEST_TILING % glob.screen_index, "2")
+        self.white_list_exist_or_create()
+        self.white_list_update()
+        self.reload_windows_list()
         custom_geoms_vec = custom_geoms_str.split(" ")
         windows_list = self.store.get_checked_windows_list(True)
         windows_list = windows_list[0] + windows_list[1]
