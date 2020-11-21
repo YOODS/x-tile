@@ -33,5 +33,13 @@ x-tile 1
 ~~~
 x-tile 2
 ~~~
-
-dashboardのLauncherにコマンド指定できるように改変すれば、Rvizとパネルの重複を回避できる
+### dashboardへの追加  
+dashboardのLauncherにpre,postプロパティが追加されました。これでlaunchの前後で実行するコマンドを指定できます。セットアップの起動設定にx-tileを実行することで、Rvizとパネルの重複を回避できます。以下dashboard.yamlの設定例。
+~~~
+launch_setup:
+  label: "セットアップ"
+  package: rovi_visual_teach
+  file: setup.launch
+  pre: "x-tile 1"
+  post: "x-tile 2"
+~~~
