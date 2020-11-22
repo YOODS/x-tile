@@ -1,18 +1,14 @@
 # X-TileでRVizをリサイズする
 ## X Tileのインストール  
-### ダウンロード
-X-TileはPython3で動いているので、Kinetic環境だとPipでインストするとややこしい。以下からdebパッケージをDLしてパッチする
+X-TileはPython3で動いているので、Kinetic環境だとPipでインストはややこしい。debパッケージ作成してインストールする。  
+Cloneしたディレクトリにて、以下実行
 ~~~
-https://www.giuspen.com/x-tile/#downl
+./create_debian_package.sh
 ~~~
+ひとつ上のディレクトリに **x-tile...deb** というDebパッケージが作成される。  
 dpkgでインストール
 ~~~
 sudo dpkg -i x-tile_3.3-0_all.deb
-~~~
-### パッチ
-このReposのcore.pyをパッチする
-~~~
-sudo cp modules/core.py /usr/share/x-tile/modules
 ~~~
 ## RVizを強制リサイズ  
 セットアップを開いた時、RVizとパネルが重なって見づらい。X-Tileを使ってRVizを強制リサイズして、重ならないようにしよう。
