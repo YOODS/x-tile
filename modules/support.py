@@ -348,7 +348,7 @@ def get_process_name(p):
             cmdp=f.read().split(chr(0))
         finally:
             f.close()
-        name=cmdp[1]
+        name=cmdp[1].split('/')[-1]
     return name
 
 

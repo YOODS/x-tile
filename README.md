@@ -16,12 +16,12 @@ sudo dpkg -i x-tile_3.3-0_all.deb
 
 |ファイル名|コンテンツ|意味|
 |:----|:----|:----|
-|~/.config/x-tile/-apps-x-tile-0-custom|0,0,1900,622|ウィンドウサイズ設定①。最大表示時のウインドウサイズとする|
-|~/.config/x-tile/-apps-x-tile-0-custom_2|0,0,1300,622|ウィンドウサイズ設定②。パネル表示時のウインドウサイズとする|
-|~/.config/x-tile/-apps-x-tile-0-process_whitelist|rviz|リサイズするプロセス名|
+|~/.config/x-tile/-apps-x-tile-0-custom|0,0,1550,622 0,622,1550,127|ウィンドウサイズ設定①。パネル表示時のウインドウサイズとする|
+|~/.config/x-tile/-apps-x-tile-0-custom_2|0,0,1920,622 0,622,1920,127|ウィンドウサイズ設定②。最大表示時のウインドウサイズとする|
+|~/.config/x-tile/-apps-x-tile-0-process_whitelist|rviz report.py|リサイズするプロセス名|
 
 ### コマンド  
-以下のコマンドにて、Rvizウィンドウがサイズ設定①にリサイズされる
+以下のコマンドにて、RVizとReportウィンドウがサイズ設定①にリサイズされる
 ~~~
 x-tile 1
 ~~~
