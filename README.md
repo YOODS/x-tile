@@ -1,12 +1,19 @@
 # X-TileでRVizをリサイズする
 ## X Tileのインストール  
 X-TileはPython3で動いているので、Kinetic環境だとPipでインストはややこしい。debパッケージ作成してインストールする。  
-Cloneしたディレクトリにて、以下実行
+*Debian Helper* がインストールされていなければ、先にインストールしておく。
+~~~
+sudo apt install debhelper
+~~~
+YOODSからX-Tileをcloneする。
+~~~
+git clone https://github.com/YOODS/x-tile.git
+~~~
+Cloneされたディレクトリにて以下実行。
 ~~~
 ./create_debian_package.sh
 ~~~
-ひとつ上のディレクトリに **x-tile...deb** というDebパッケージが作成される。  
-dpkgでインストール
+ひとつ上のディレクトリに **x-tile...deb** というDebパッケージが作成されるので、dpkgでインストール
 ~~~
 sudo dpkg -i x-tile_3.3-0_all.deb
 ~~~
