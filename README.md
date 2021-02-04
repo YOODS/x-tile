@@ -9,7 +9,7 @@ YOODSからX-Tileをcloneする。
 ~~~
 git clone https://github.com/YOODS/x-tile.git
 ~~~
-Cloneされたディレクトリにて以下実行。
+Cloneされたディレクトリにて以下実行。エラーがたくさん出てもdebパッケージファイル(**x-tile...deb**)が出来ていれば良し。
 ~~~
 ./create_debian_package.sh
 ~~~
